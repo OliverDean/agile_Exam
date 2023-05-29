@@ -1,0 +1,4 @@
+topic 15: deploying the application
+deploying via a linuxvirtual machine, your own server, or Heroku
+gunicorn as a web server to run the flask app
+NGINX is the external facing web server
