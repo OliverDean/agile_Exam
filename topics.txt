@@ -44,3 +44,13 @@ testing
 RESTful APIs 
 Client side rendering 
 deploying the application
+
+
+As soon as you know what the project requires and when it is due, start early and plan ahead. This might involve creating a project timeline with specific milestones that you aim to achieve by certain dates. Recognize that not all tasks are equally important, so prioritize those that are most critical to the project's success. we emploied a strategy called group project treiage wherin scope is reduced as the deadline approaches. Each team member will likely have different strengths and weaknesses, play to the teams strengths. Maintain open lines of communication; if someone is struggling to meet a deadline, it's important they communicate this to the rest of the team as soon as possible.
+
+<div id="advice1">
+    <h2>Deadlines and Deliverables</h2>
+    <p>
+    As soon as you know what the project requires and when it is due, start early and plan ahead. This might involve creating a project timeline with specific milestones that you aim to achieve by certain dates. Recognize that not all tasks are equally important, so prioritize those that are most critical to the project's success. We employed a strategy called group project triage wherein scope is reduced as the deadline approaches. Each team member will likely have different strengths and weaknesses, play to the teams strengths. Maintain open lines of communication; if someone is struggling to meet a deadline, it's important they communicate this to the rest of the team as soon as possible.
+    </p>
+</div>
