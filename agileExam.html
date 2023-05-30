@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<!-- Oliver Dean 21307131 -->
+<html lang="en">
 <head>
     <title>Agile Exam</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Alicecat.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -27,11 +28,14 @@
     <section id="overview">
         <h2 class="collapsible-title">Overview</h2>
         <div class="collapsible-content">
-            <p>We developed a Flask-based "dating co-pilot" application, aimed at individuals seeking dating partners and requiring assistance in crafting compelling dating profiles. The application employs an interactive chat dialog, leading to the use of OpenAI's GPT model, which generates a personalized dating profile based on user inputs.</p>
-            <p>The application is backed by an SQLAlchemy database. The User model manages personal data, UserSession tracks login sessions, UserQuestionAnswer stores users' responses, and the Question model, in conjunction with a python script, seeds the database with pre-set queries for the chat app. We utilize MD5 hashing and never store plaintext passwords to increase user security. Session cookies make users' data inaccessible to other users.</p>
-            <p>Our application features several routes, including /login, /register, /chat, /history, and /about. The /login and /register routes facilitate user authentication, while /chat initiates the dialogue with the bot. The /history route allows users to review their past interactions. The /about route details the message and mission of the application in the voice of the company, Reli AI.</p>
-            <p>Our application's features and design underwent constant evolution, as we were open to changes in response to the insights gained from iterative development and testing. This was the first time that either of us used GIT, Agile, Flask, Javascript, and HTML. That made for a very challenging but rewarding project, I think we both learned a massive amount and had a lot of fun.</p>
-            <p>Bellow are screenshots of the login screen, registration form, chat window, the about page, and the history.</p>
+            <div class="step">
+                <p>We developed a Flask-based "dating co-pilot" application, aimed at individuals seeking dating partners and requiring assistance in crafting compelling dating profiles. The application employs an interactive chat dialog, leading to the use of OpenAI's GPT model, which generates a personalized dating profile based on user inputs.</p>
+                <p>The application is backed by an SQLAlchemy database. The User model manages personal data, UserSession tracks login sessions, UserQuestionAnswer stores users' responses, and the Question model, in conjunction with a python script, seeds the database with pre-set queries for the chat app. We utilize MD5 hashing and never store plaintext passwords to increase user security. Session cookies make users' data inaccessible to other users.</p>
+                <p>Our application features several routes, including /login, /register, /chat, /history, and /about. The /login and /register routes facilitate user authentication, while /chat initiates the dialogue with the bot. The /history route allows users to review their past interactions. The /about route details the message and mission of the application in the voice of the company, Reli AI.</p>
+                <p>Our application's features and design underwent constant evolution, as we were open to changes in response to the insights gained from iterative development and testing. This was the first time that either of us used GIT, Agile, Flask, Javascript, and HTML. That made for a very challenging but rewarding project, I think we both learned a massive amount and had a lot of fun.</p>
+                <p>Directions on how to build and run the application can be found in the Build and Run Instructions section.</p>
+                <p>Bellow are screenshots of the login screen, registration form, chat window, the about page, and the history page.</p>
+            </div>
             <h2 class="collapsible-title">Screenshots</h2>
             <div class="collapsible-content">
                 <div class="image-container">
@@ -65,48 +69,94 @@
     <section id="features">
         <h2 class="collapsible-title">Suggested Features</h2>
         <div class="collapsible-content">
-            <div id="feature1">
-                <h3>Feature 1</h3>
-                <p>Feature description, reason and user story.</p>
-                <ul>
-                    <li>Test Case</li>
-                    <!-- Add more test cases as needed -->
-                </ul>
+            <div id="feature1" class="step">
+                <h2>User-to-User Chat Functionality</h2>
+                <div>
+                    <h4>Description and Reasoning:</h4>
+                    <p>
+                        This feature would enable users to chat directly with each other on the platform. At present, the primary interaction available to users involves the chatbot, which, while useful, provides a limited scope of interaction. Incorporating a user-to-user chat feature could substantially broaden this scope, fostering a community within the platform and creating additional engagement opportunities. By leveraging existing server-side and client-side functionalities for user registration and authentication, as well as session management, you could readily extend the platform to support user-to-user chats. Only minor changes to the structure of the chat route would be required. This would enhance the value of the app and provide an additional avenue for monetization.
+                    </p>
+                </div>
+                <div>
+                    <h4>User Story:</h4>
+                    <p>
+                        As a user, I want to be able to chat with other users on the platform. After logging in, I should be able to select a user from a list or search by username. Upon selecting a user, a chat window should open where I can send and receive messages in real-time.
+                    </p>
+                </div>
+                <div>
+                    <h4>Test Cases:</h4>
+                    <ul>
+                        <li>Given that I am a registered and authenticated user, when I select another user to chat with, then a chat window should open allowing me to send and receive messages.</li>
+                        <li>Given that I am in a chat with another user, when I type a message and hit send, then the message should appear in the chat window and also be visible to the other user.</li>
+                        <li>Given that I am in a chat with another user, when the other user sends a message, then that message should appear in my browser chat window in real-time.</li>
+                    </ul>
+                </div>
             </div>
-            <div id="feature2">
-                <h3>Feature 2</h3>
-                <p>Feature description, reason and user story.</p>
-                <ul>
-                    <li>Test Case</li>
-                    <!-- Add more test cases as needed -->
-                </ul>
+            <div id="feature2" class="step">
+                <h2>Multimedia Functionality</h2>
+                <div>
+                    <h4>Description and Reasoning:</h4>
+                    <p>
+                        This feature would enable users to upload multimedia files, such as profile pictures and images for sharing with the chatbot. The rationale behind this feature is rooted in the desire for enhanced user interactivity and personalization. In the initial stages of development, plans were in place to allow image-based exchanges between users and the chatbot, as well as image editing capabilities via DALL-E integration. Despite existing drag-and-drop functionality within the app's JavaScript code, full implementation was never achieved. By realizing this feature, we could increase user engagement and satisfaction.
+                    </p>
+                </div>
+                <div>
+                    <h4>User Story:</h4>
+                    <p>
+                        As a user, I want to be able to upload my profile picture and share images with the chatbot. This means that after logging in, I should be able to navigate to my profile settings, select an image file from my device, and successfully upload it as my profile picture. Additionally, I should be able to send image files during chatbot interactions, with the chatbot capable of providing image-based responses or commentary.
+                    </p>
+                </div>
+                <div>
+                    <h4>Test Cases:</h4>
+                    <ul>
+                        <li>Given that I am a registered and authenticated user, when I navigate to my profile settings and select an image file to upload as my profile picture, then the chosen image should be displayed as my profile picture on the platform.</li>
+                        <li>Given that I am interacting with the chatbot, when I select an image file to share in the chat, then the image should appear in the chat window, visible to both me and the chatbot.</li>
+                        <li>Given that I've shared an image file in the chatbot conversation, when the chatbot provides a response or commentary, then it should appear alongside the shared image in the chat window.</li>
+                    </ul>
+                </div>
             </div>
-            <div id="feature3">
-                <h3>Feature 3</h3>
-                <p>Feature description, reason and user story.</p>
-                <ul>
-                    <li>Test Case</li>
-                    <!-- Add more test cases as needed -->
-                </ul>
-            </div>
+            
         </div>
     </section>
 
     <section id="advice">
         <h2 class="collapsible-title">Advice for Groups</h2>
         <div class="collapsible-content">
-            <div id="advice1">
-                <h3>Deadline prioritization advice.</h3>
-                <p>Advice description.</p>
+            <div id="advice1" class="step">
+                <h2>Deadlines and Deliverables</h2>
+                <p>
+                As soon as you know what the project requires and when it is due, start early and plan ahead. This might involve creating a project timeline with specific milestones that you aim to achieve by certain dates. Recognize that not all tasks are equally important, so prioritize those that are most critical to the project's success. We employed a strategy called group project triage wherein scope is reduced as the deadline approaches. Each team member will likely have different strengths and weaknesses, play to the teams strengths. Maintain open lines of communication; if someone is struggling to meet a deadline, it's important they communicate this to the rest of the team as soon as possible.
+                </p>
             </div>
-            <div id="advice2">
-                <h3>Software tools advice.</h3>
-                <p>Advice description.</p>
+            
+            <div id="advice2" class="step">
+                <h2>Software Tools</h2>
+                <p>
+                For efficient collaboration in coding, I recommend using <a href="https://github.com/">GitHub</a> as your version control system. It allows you to track changes, manage branches, handle merge conflicts, and facilitates collaboration. This project was my initial encounter with Git, and its utility was invaluable. Not only does it enable tracking changes and managing branches, but it also crucially removes attribution ambiguity in group work. for communication we used <a href="https://discord.com/">Discord</a>and Facebook Messenger.
+                </p>
+                <p>
+                For writing and testing your code, the usage of an Integrated Development Environment (IDE) is highly recommended. My personal preference is <a href="https://code.visualstudio.com/">Visual Studio Code</a>. Other alternatives that have been recommended to me include <a href="https://netbeans.apache.org/">Apache NetBeans IDE</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, and even <a href="https://notepad-plus-plus.org/">Notepad++</a>.
+                </p>
+                <p>
+                GitHub's AI pair programmer, <a href="https://copilot.github.com/">GitHub Copilot</a>, proved to be extremely useful for boilerplating and ensuring consistent spelling of variable names. Utilizing all available tools also includes interacting with large language models, and <a href="https://chat.openai.com/">GPT-4</a> served as a catalyst and code accelerator for us.
+                </p>
+                <p>
+                Although we used virtual environments in this project, if I were to do it again, I would opt for <a href="https://www.docker.com/">Docker</a> for containerization. Docker ensures that the application runs identically on every machine. Ultimately, finding the development environment that suits you best as an individual is the most important thing.
+                </p>
             </div>
-            <div id="advice3">
-                <h3>Communication and task allocation advice</h3>
-                <p>Advice description.</p>
+            <div id="advice3" class="step">
+                <h2>Managing Communication</h2>
+                <p>
+                Using a version control system like GitHub not only helps with managing code but also keeps everyone focused on the task at hand and reduces attribution errors in group work. Maintaining communication lines is crucial in a team project. Tools like Discord, Facebook Messenger, and UWA student email can be essential.
+                </p>
+                <p>
+                Adopting practices such as taking meeting minutes, democratically assigning workloads, and mutually agreeing on deadlines can be helpful. Though not a panacea, as evidenced by my experience in the CITS3002 group project.
+                </p>
+                <p>
+                Specifically for this project, maintaining a constant dialogue on Discord and initiating regular in-person coding sessions very early on made the project management process quite smooth. Planning and starting early is the best advice I can give.
+                </p>
             </div>
+            
         </div>
     </section>
 </body>

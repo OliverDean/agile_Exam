@@ -110,7 +110,7 @@ section ul li {
 }
 
 #features > div ul li {
-    color: #1b1;
+    margin-top: 5px;
 }
 
 #advice ul li {
@@ -119,11 +119,13 @@ section ul li {
 
 .step {
     background-color: #444;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; 
     padding: 10px;
     border: 2px solid #777;
     border-radius: 5px;
+    width: 80%;
 }
+
 
 .code-container {
     background-color: #333;
@@ -185,5 +187,12 @@ section ul li {
 }
 
 .collapsible-title:hover {
-    color: blue;
+    color: #1b1;
+}
+
+a:link {
+    color: #ff0;
+}
+a:visited {
+    color: #1b1;
 }
