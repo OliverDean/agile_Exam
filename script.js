@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let step of stepsData) {
         stepsContainer.appendChild(createStepElement(step));
     }
-
+    // Add an event listener to the steps container to handle clicks
+    // This uses event delegation to handle clicks on any child elements
     stepsContainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('copy-btn')) {
             copyToClipboard(event.target);
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Function to create an HTML element for a given step, this function uses the DOM to make dynamic elements, it checks if the step has code, an image, or an aside and adds them to the element if they exist
 function createStepElement(step) {
     let stepElement = document.createElement("div");
     stepElement.classList.add("step");
@@ -98,7 +100,6 @@ function createStepElement(step) {
             `;
         }
     }
-    
 
     stepElement.innerHTML = `
         <div class="header">
@@ -112,7 +113,7 @@ function createStepElement(step) {
 
     return stepElement;
 }
-
+// Function to toggle the aside element and a function to copy code to clipboard
 function toggleAside(button) {
     let aside = button.nextElementSibling;
     aside.style.display = aside.style.display === "none" ? "block" : "none";
