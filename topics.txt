@@ -2,3 +2,45 @@ topic 15: deploying the application
 deploying via a linuxvirtual machine, your own server, or Heroku
 gunicorn as a web server to run the flask app
 NGINX is the external facing web server
+
+difficulties of doing the web app in flask
+
+
+overview and description of the app
+The application is a 
+uses API calls to OpenAI specifically chatgpt to create user specific dating profiles.
+
+client side
+
+server side
+
+agile software process
+
+
+unit outcomes
+1	explain the key components that work together to enable the delivery of data and services on today's internet.
+2	understand the technologies behind the terms and how they fit together, and back this up with examples of hands-on programming experience.
+3	develop web applications using client side and server side technologies.
+4	explain and apply agile project methodologies.
+
+assessments
+1   web application project
+2   mid-semester test
+3   final examination   (take home test)
+
+topics 15 in order are
+introduction
+HTML hyper text markup language 
+CSS cascading style sheets
+bootstrap
+Javascript
+DOM document object model
+JQuery, and AJAX 
+agile Development
+Flask applications
+model view controller
+authentication
+testing
+RESTful APIs 
+Client side rendering 
+deploying the application

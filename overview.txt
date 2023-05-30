@@ -1,0 +1,7 @@
+We developed a Flask-based "dating co-pilot" application, aimed at individuals seeking dating partners and requiring assistance in crafting compelling dating profiles. The application employs an interactive chat dialog, leading to the use of OpenAI's GPT model, which generates a personalized dating profile based on user inputs.
+
+The application is backed by an SQLAlchemy database. The User model manages personal data, UserSession tracks login sessions, UserQuestionAnswer stores users' responses, and the Question model, in conjunction with a python script, seeds the database with pre-set queries for the chat app. We utilize MD5 hashing and never store plaintext passwords to increase user security. Session cookies make users' data inaccessible to other users.
+
+Our application features several routes, including /login, /register, /chat, /history, and /about. The /login and /register routes facilitate user authentication, while /chat initiates the dialogue with the bot. The /history route allows users to review their past interactions. The /about route details the message and mission of the application in the voice of the company, Reli AI.
+
+Our application's features and design underwent constant evolution, as we were open to changes in response to the insights gained from iterative development and testing. This was the first time that either of us used GIT, Agile, Flask, Javascript, and HTML. That made for a very challenging but rewarding project, I think we both learned a massive amount and had a lot of fun.

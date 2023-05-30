@@ -7,49 +7,183 @@ body {
     font-family: "Volter", sans-serif;
     background-color: #000;
     color: #ccc;
+    margin: 20px;
+    padding: 5px;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    border-bottom: 2px solid #777;
+    text-align: center;
 }
 
 h1, h2 {
-    text-align: center;
-    color: #1b1; /* Green, like in Quake's logo */
+    color: #1b1;
 }
 
-.outcome1 { color: #1b1; } /* Green */
-.outcome2 { color: #b11; } /* Red */
-/* Define more colors for other outcomes */
-
-#topics {
-    margin: 20px 0;
-}
-
-.topic {
+nav {
     background-color: #333;
-    margin-bottom: 20px;
     padding: 10px;
+    border-bottom: 2px solid #777;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+section {
+    background-color: #333;
+    margin: 20px;
+    padding: 20px;
     border: 2px solid #777;
 }
 
-.topic h3 {
-    cursor: pointer;
-    color: #ff0; /* Yellow, for a Quake power-up feel */
+section h2 {
+    color: #ff0;
 }
 
-.topic .overview,
-.topic .relevant-outcomes,
-.topic .concepts,
-.topic .notes {
-    display: none;
+section p, section ul {
+    color: #ccc;
     margin-top: 10px;
 }
 
-.topic .notes {
-    width: 100%;
-    height: 100px;
-    color: #000;
-    background-color: #fff;
+section img {
+    max-width: 100%;
 }
 
-.topic.completed {
-    background-color: #1b1; /* Green */
-    border-color: #ff0; /* Yellow, to signify completion */
+section ul li {
+    margin-top: 5px;
+}
+
+#instructions #steps div {
+    margin-top: 20px;
+}
+
+#instructions #steps div h3 {
+    color: #ff0;
+}
+
+#instructions #steps div p {
+    color: #ccc;
+}
+
+#instructions #steps div img {
+    max-width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+#instructions #steps div button {
+    display: block;
+    color: #ff0;
+    background-color: #333;
+    border: 1px solid #777;
+    margin: 10px auto;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#instructions #steps div aside {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+#features > div {
+    margin-top: 20px;
+}
+
+#features > div ul li {
+    color: #1b1;
+}
+
+#advice ul li {
+    color: #b11;
+}
+
+.step {
+    background-color: #444;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #777;
+    border-radius: 5px;
+}
+
+.code-container {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.code-container p {
+    white-space: pre-wrap;
+}
+
+.code-container .copy-btn {
+    position: absolute;
+    font-family: inherit;
+    font-size: inherit;
+    top: 10px;
+    right: 10px;
+}
+
+.step .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step aside {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.aside-button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.image-container {
+    background-color: #444;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #777;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.resized-image {
+    width: 40%;
+}
+
+.resized-image-wide {
+    width: 70%;
+}
+
+.collapsible-title {
+    transition: color 0.3s ease;
+}
+
+.collapsible-title:hover {
+    color: blue;
 }

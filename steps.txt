@@ -1,0 +1,89 @@
+{
+    title: "Object Relational Mapping with SQLAlchemy",
+    text: "In our project, SQLAlchemy serves as a powerful SQL toolkit and Object-Relational Mapping (ORM) system. This allows us to create Python classes that map directly to the database tables. For instance, consider the User class, where attributes like 'id', 'username', 'email', etc., map to respective columns in the 'user' table in our database. Similarly, we also have classes such as UserSession, Question and UserQuestionAnswer that correspond to their respective tables. These classes help us abstract the database operations, simplifying database management tasks as if they were just Python object manipulations.",
+    image: "./sqlalchemy.jpg",
+    aside: {
+        label: "Detailed Working of SQLAlchemy",
+        note: "SQLAlchemy allows us to work with Relational Databases in Python efficiently and provides us with a high degree of abstraction. Models (or tables in the database) are defined as Python classes, and SQLAlchemy then allows us to interact with these tables as if they were Python objects. Creating a new row in a table is as simple as creating a new instance of a model and adding it to your session. SQLAlchemy also simplifies the task of writing complex SQL queries. In our project, for instance, we use SQLAlchemy in the 'history' route to fetch and filter questions and the user's answers from the database. This is done using methods like `Question.query.all()` or `UserQuestionAnswer.query.filter_by()`, which behind the scenes, convert these commands to raw SQL queries and execute them."
+    }
+}
+
+{
+    title: "User Authentication with Flask",
+    text: "In the project, user authentication is handled with Flask's user management system, alongside SQLAlchemy. Let's look at the '/login' route. When a user tries to log in, the route's method checks if it's a POST request. The username and password are extracted from the form data, and then we query the User table for the user with the entered username. The check_password method of the User model is then used to verify the password.",
+    image: "./flask-login.jpg",
+    aside: {
+        label: "Detailed Working of User Authentication",
+        note: "In our '/login' route, after verifying the user credentials, we employ Flask-Login's login_user method, which keeps track of the user's authenticated state. Also, a new session token is generated and stored in the session, which is then used to create a new UserSession object. This object is then committed to the database. This process, as a whole, ensures a secure user login system. If the credentials do not match, an appropriate error message is returned. This route exhibits a fundamental application of SQLAlchemy's ORM capabilities to handle user sessions securely and efficiently."
+    }
+}
+
+{
+    title: "",
+    text: "",
+    code: ["",""],
+    image: "",
+    aside: {
+        label: "",
+        note: ""
+    }
+}
+
+{
+    title: "",
+    text: "",
+    code: ["",""],
+    image: "",
+    aside: {
+        label: "Routing",
+        note: "Explain how a flask routes handle requests using a stateless client server architecture. You should use examples from your project"
+    }
+}
+
+{
+    title: "Database Initialization",
+    text: "",
+    code: ["rm app.db","rm -r migrations/","flask db init","flask db migrate -m 'upgrading'","flask db upgrade"],
+    image: "./History_code.jpg",
+    aside: {
+        label: "Object Relational Mapping",
+        note: "SQLAlchemy allows us to work with Relational Databases in Python efficiently and provides us with a high degree of abstraction. Models (or tables in the database) are defined as Python classes, and SQLAlchemy then allows us to interact with these tables as if they were Python objects. Creating a new row in a table is as simple as creating a new instance of a model and adding it to your session. SQLAlchemy also simplifies the task of writing complex SQL queries. In our project, for instance, we use SQLAlchemy in the 'history' route to fetch and filter questions and the user's answers from the database. This is done using methods like `Question.query.all()` or `UserQuestionAnswer.query.filter_by()`, which behind the scenes, convert these commands to raw SQL queries and execute them."
+    }
+}
+The database is designed to be automatically created and initialized alongside the first run of the Flask application. During this initialization, the database is seeded with data via the seed_db.py Python function. However, if for some reason the database is not properly initialized or seeded, you can manually re-instantiate it. To do this, follow the steps outlined below, entering each command into a terminal located in the ./Login Page directory one at a time.
+
+
+{
+    title: "Virtual Environment Setup",
+    text: "",
+    code: ["python -m venv venv","venv\Scripts\activate","pip install -r requirements.txt"],
+    image: "",
+    aside: {
+        label: "",
+        note: ""
+    }
+}
+
+{
+    title: "Selenium Testing",
+    text: "From the Login page directory run:",
+    code: ["python autoSelenium.py"],
+    image: "",
+    aside: {
+        label: "",
+        note: ""
+    }
+}
+
+{
+    title: "Unit Testing",
+    text: "From the Login page directory run:",
+    code: ["python -m unittest testing.unitTests"],
+    image: "",
+    aside: {
+        label: "",
+        note: ""
+    }
+}
+
+

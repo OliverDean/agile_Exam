@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agile Exam</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="Alicecat.png" sizes="32x32">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>CITS3403: Agile Web Development</h1>
+        <h1>Oliver Dean - 21307131</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#instructions">Build and Run Instructions</a></li>
+            <li><a href="#features">Suggested Features</a></li>
+            <li><a href="#advice">Advice for Groups</a></li>
+        </ul>
+    </nav>
+
+    <section id="overview">
+        <h2 class="collapsible-title">Overview</h2>
+        <div class="collapsible-content">
+            <p>We developed a Flask-based "dating co-pilot" application, aimed at individuals seeking dating partners and requiring assistance in crafting compelling dating profiles. The application employs an interactive chat dialog, leading to the use of OpenAI's GPT model, which generates a personalized dating profile based on user inputs.</p>
+            <p>The application is backed by an SQLAlchemy database. The User model manages personal data, UserSession tracks login sessions, UserQuestionAnswer stores users' responses, and the Question model, in conjunction with a python script, seeds the database with pre-set queries for the chat app. We utilize MD5 hashing and never store plaintext passwords to increase user security. Session cookies make users' data inaccessible to other users.</p>
+            <p>Our application features several routes, including /login, /register, /chat, /history, and /about. The /login and /register routes facilitate user authentication, while /chat initiates the dialogue with the bot. The /history route allows users to review their past interactions. The /about route details the message and mission of the application in the voice of the company, Reli AI.</p>
+            <p>Our application's features and design underwent constant evolution, as we were open to changes in response to the insights gained from iterative development and testing. This was the first time that either of us used GIT, Agile, Flask, Javascript, and HTML. That made for a very challenging but rewarding project, I think we both learned a massive amount and had a lot of fun.</p>
+            <p>Bellow are screenshots of the login screen, registration form, chat window, the about page, and the history.</p>
+            <h2 class="collapsible-title">Screenshots</h2>
+            <div class="collapsible-content">
+                <div class="image-container">
+                    <img class="resized-image" src="Login_Page.jpg" alt="Login Screenshot">
+                </div>
+                <div class="image-container">
+                    <img class="resized-image" src="Register_User.jpg" alt="Register Screenshot">
+                </div>
+                <div class="image-container">
+                    <img class="resized-image-wide" src="Chat_Window.jpg" alt="Chat Screenshot">
+                </div>
+                <div class="image-container">
+                    <img class="resized-image-wide" src="About.jpg" alt="About Screenshot">
+                </div>
+                <div class="image-container">
+                    <img class="resized-image-wide" src="History.jpg" alt="History Screenshot">
+                </div>
+            </div>
+        </div>   
+    </section>
+
+    <section id="instructions">
+        <h2 class="collapsible-title">Build and Run Instructions</h2>
+        <div class="collapsible-content">
+            <div id="steps">
+                <!-- Steps will be added here with JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2 class="collapsible-title">Suggested Features</h2>
+        <div class="collapsible-content">
+            <div id="feature1">
+                <h3>Feature 1</h3>
+                <p>Feature description, reason and user story.</p>
+                <ul>
+                    <li>Test Case</li>
+                    <!-- Add more test cases as needed -->
+                </ul>
+            </div>
+            <div id="feature2">
+                <h3>Feature 2</h3>
+                <p>Feature description, reason and user story.</p>
+                <ul>
+                    <li>Test Case</li>
+                    <!-- Add more test cases as needed -->
+                </ul>
+            </div>
+            <div id="feature3">
+                <h3>Feature 3</h3>
+                <p>Feature description, reason and user story.</p>
+                <ul>
+                    <li>Test Case</li>
+                    <!-- Add more test cases as needed -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="advice">
+        <h2 class="collapsible-title">Advice for Groups</h2>
+        <div class="collapsible-content">
+            <div id="advice1">
+                <h3>Deadline prioritization advice.</h3>
+                <p>Advice description.</p>
+            </div>
+            <div id="advice2">
+                <h3>Software tools advice.</h3>
+                <p>Advice description.</p>
+            </div>
+            <div id="advice3">
+                <h3>Communication and task allocation advice</h3>
+                <p>Advice description.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
